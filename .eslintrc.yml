@@ -1,0 +1,25 @@
+root: true # picks up ESLint config from the root directory
+
+parserOptions:
+  ecmaVersion: 2020 # use the latest ES standard
+  sourceType: 'module' # allow ES modules (import/export statements)
+
+env:
+  es6: true
+  commonjs: true # enable CommonJS syntax (e.g. require(), module.exports)
+  node: true # enable Node.js globals and scoping
+
+extends:
+  # make prettier plugin the last statement, so prettier configuration
+  # overrides other formatting rules
+  - 'eslint:recommended'
+  - 'google'
+  - 'plugin:prettier/recommended'
+
+plugins:
+  - 'simple-import-sort'
+
+rules:
+  # use .prettierrc.yml as Prettier configuration source
+  prettier/prettier: ['error', {}, { usePrettierrc: true }]
+  simple-import-sort/imports: 'error'

@@ -1,0 +1,34 @@
+{
+  "name": "exoplanets",
+  "version": "1.0.0",
+  "description": "A cool exoplanets explorer",
+  "main": "index.js",
+  "engines": {
+    "node": "16.2.0",
+    "npm": "7.13.0"
+  },
+  "scripts": {
+    "lint": "eslint --fix .",
+    "format": "prettier --write './**/*.{js,css,md,json}' --config ./.prettierrc.yml",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node.js",
+    "Kepler",
+    "Exoplanets",
+    "Explorer"
+  ],
+  "author": "ualali",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^4.15.4",
+    "eslint-config-google": "^0.14.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "prettier": "^2.3.0"
+  }
+}
