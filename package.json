@@ -1,6 +1,6 @@
 {
   "name": "exoplanets",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A cool exoplanets explorer",
   "main": "index.js",
   "type": "module",
@@ -20,7 +20,7 @@
     "Explorer"
   ],
   "author": "ualali",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "csv-parse": "^4.15.4",
     "pino": "^6.11.3"
