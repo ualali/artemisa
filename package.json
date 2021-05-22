@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A cool exoplanets explorer",
   "main": "index.js",
+  "type": "module",
   "engines": {
     "node": "16.2.0",
     "npm": "7.13.0"
@@ -22,13 +23,15 @@
   "license": "ISC",
   "dependencies": {
     "csv-parse": "^4.15.4",
-    "eslint-config-google": "^0.14.0"
+    "pino": "^6.11.3"
   },
   "devDependencies": {
     "eslint": "^7.27.0",
+    "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
+    "pino-pretty": "^4.8.0",
     "prettier": "^2.3.0"
   }
 }
