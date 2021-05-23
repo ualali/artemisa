@@ -1,7 +1,7 @@
 {
-  "name": "exoplanets",
-  "version": "0.1.0",
-  "description": "A cool exoplanets explorer",
+  "name": "artemisa",
+  "version": "1.0.0",
+  "description": "NASA Space Mission Control for space explorers.",
   "main": "index.js",
   "type": "module",
   "engines": {

@@ -1,2 +1,3 @@
-# exoplanets
-An incredible exoplanets explorer
+# Artemis
+
+NASA Space Mission Control for space explorers.
