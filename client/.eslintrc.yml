@@ -1,0 +1,64 @@
+root: true # picks up ESLint config from the root directory
+
+parser: '@babel/eslint-parser'
+
+parserOptions:
+  ecmaVersion: 2020 # use the latest ES standard
+  sourceType: 'module' # allow ES modules (import/export statements)
+  ecmaFeatures:
+    jsx: true # enable JSX
+  requireConfigFile: false # required to use @babel/eslint-parser
+  babelOptions:
+    plugins:
+      - '@babel/plugin-syntax-jsx'
+
+settings:
+  react:
+    version: 'detect' # automatically detect the React version
+
+env:
+  browser: true # enable browser globals (e.g. window, document)
+  commonjs: true # enable CommonJS syntax (e.g. require(), module.exports)
+  amd: true # enable AMD syntax (e.g. define())
+  node: true # enable Node.js globals and scoping
+  es6: true # enable ES6 modules syntax
+
+extends:
+  # make prettier plugin the last statement, so prettier configuration
+  # overrides other formatting rules
+  - 'eslint:recommended'
+  - 'plugin:react/recommended'
+  - 'plugin:react-hooks/recommended'
+  - 'plugin:jsx-a11y/recommended'
+  - 'plugin:prettier/recommended'
+
+plugins:
+  - 'simple-import-sort'
+
+rules:
+  # use .prettierrc.yml as Prettier configuration source
+  prettier/prettier: ['error', {}, { usePrettierrc: true }]
+  react/react-in-jsx-scope: 'off'
+  react/prop-types: 'error'
+  simple-import-sort/imports: 'error'
+  jsx-a11y/anchor-is-valid:
+    - 'error'
+    - {
+        components: ['link'],
+        specialLink: ['hrefLeft', 'hrefRight'],
+        aspects: ['invalidHref', 'preferButton']
+      }
+
+overrides:
+  - files: ['*.ts', '*.tsx']
+    parser: '@typescript-eslint/parser'
+    extends:
+      # make prettier plugin the last statement, so prettier configuration
+      # overrides other formatting rules
+      - 'eslint:recommended'
+      - ''
+      - 'plugin:@typescript-eslint/recommended'
+      - 'plugin:react/recommended'
+      - 'plugin:react-hooks/recommended'
+      - 'plugin:jsx-a11y/recommended'
+      - 'plugin:prettier/recommended'
